@@ -6,6 +6,9 @@
   --coral: #FFD495;
   --orange: #FAAB78;
   --navy: #344D67;
+  --mediumseagreen: #3cb371;
+  --slategray: #708090;
+  --honeydew: #f0fff0;
 }
 
 *{
@@ -13,7 +16,7 @@
 }
 
 html {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Times', sans-serif;
   min-width: 320px;
   height: 100%;
   margin: 0;
@@ -31,8 +34,8 @@ header {
   align-items: center;
   height: 100px;
 
-  background-color: var(--green);
-  color: var(--navy);
+  background-color: var(--pink);
+  color: var(--black);
   border-radius: 5px;
   font-size: 2rem;
   font-weight: bold;
@@ -52,7 +55,7 @@ nav {
   width: 120px;
   margin-right: 10px;
 
-  border: 5px solid var(--green);
+  border: 15px solid var(--honeydew);
   border-radius: 15px;
   padding: 5px;
 }
@@ -68,12 +71,12 @@ article {
   display: flex;
   flex: 1;
   flex-flow: row wrap;
-  align-content: center;
-  justify-content: center;
+  align-content: left;
+  justify-content: left;
   overflow-y: scroll;
 
-  border: 5px solid var(--coral);
-  border-radius: 15px;
+  border: 20px solid var(--mediumseagreen);
+  border-radius: 20px;
 }
 
 .card {
@@ -83,7 +86,7 @@ article {
   min-height: 150px;
   padding: 10px;
 
-  background-color: var(--yellow);
+  background-color: var(--slategray);
   margin: 10px;
   border-radius: 15px;
 }
@@ -119,6 +122,6 @@ article {
 
 @media (max-width: 700px){
   .card{
-      background: var(--coral);
+      background: var(--navy);
   }
 }
