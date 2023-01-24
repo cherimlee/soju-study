@@ -33,11 +33,9 @@ header {
   justify-content: center;
   align-items: center;
   height: 100px;
-
-  background-color: var(--pink);
   color: var(--black);
   border-radius: 5px;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -48,35 +46,34 @@ main{
   margin-top: 40px;
 }
 
-nav {
+.sidebar {
   display: flex;
   flex-flow: column nowrap;
   flex-shrink: 0;
-  width: 120px;
+  width: 150px;
   margin-right: 10px;
-
   border: 15px solid var(--honeydew);
   border-radius: 15px;
   padding: 5px;
 }
 
-nav > span {
-  margin: .4rem;
-  font-size: .9rem;
+.sidebar > span {
+  margin: .3rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--slategray);
 }
 
-article {
+.container {
   display: flex;
   flex: 1;
   flex-flow: row wrap;
-  align-content: left;
-  justify-content: left;
+  align-content: center;
+  justify-content: center;
   overflow-y: scroll;
-
-  border: 20px solid var(--mediumseagreen);
+  border: 10px solid var(--green);
   border-radius: 20px;
+  padding: 5px;
 }
 
 .card {
@@ -85,10 +82,9 @@ article {
   width: 200px;
   min-height: 150px;
   padding: 10px;
-
-  background-color: var(--slategray);
+  background-color: var(--coral);
   margin: 10px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .card > img {
@@ -98,30 +94,118 @@ article {
   margin-bottom: 10px;
 }
 
-.card > span:first-of-type {
+.card > span {
   margin-bottom: 10px;
   color: var(--navy);
-  text-decoration-line: underline;
-  text-decoration-style: wavy;
   text-decoration-color: var(--navy);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
-  word-break: break-all;
-}
-
-.card > span {
   text-align: center;
   word-break: break-all;
 }
 
+.add-button{
+  padding: 7px 9px;
+  background: var(--honeydew);
+  color: var(--white);
+  border-radius: 10px;
+  font-weight: 900;
+  cursor: pointer;
+  border: none;
+}
+
+.add-button:hover{
+  background: var(--honeydew);
+  color: var(--slategray);
+}
+
+.submit-button{
+  padding: 7px 5px;
+  background: var(--coral);
+  color: var(--slategray);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  width: 100px;
+  margin-top: 20px;
+  align-content: center;
+  justify-content: center;
+}
+
+.submit-button:hover{
+  background: var(--honeydew);
+}
+
+.label{
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.input{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  outline: none;
+  border: 2px var(--honeydew);
+  border-radius: 6px;
+}
+
+.input:focus{
+  border-color: var(--coral);
+}
+
+.modal-background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 10;
+}
+
+.modal{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background-color: var(--honeydew);
+  border-radius: 10px;
+  z-index: 11;
+  padding: 20px;
+}
+
+.modal-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 12;
+}
+
+.modal-close:hover{
+  transform: scale(1.2);
+}
 @media (max-width: 1000px){
   .card{
-      background: var(--orange);
+      background: var(--honeydew);
   }
 }
 
 @media (max-width: 700px){
   .card{
-      background: var(--navy);
+      background: var(--orange);
   }
 }

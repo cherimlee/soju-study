@@ -10,18 +10,22 @@
 </head>
 
 <body>
-  <header>Chainsaw Man</header>
+  <header>
+    <span class="title">Chainsaw Man</span>
+  </header>
 
   <main>
-    <nav>
+
+    <div class="sidebar" id="sidebar">
+      <button type="button" class="add-button" id="addItem">New!</button>
       <span>Pochita</span>
       <span>Denji</span>
       <span>Power</span>
       <span>Aki</span>
       <span>Makima</span>
-    </nav>
+  </div>
 
-    <article>
+  <section class="container" id="container">
       <div class="card">
         <img src="./Image/denji.png" alt="denji" />
         <span>Denji</span>
@@ -42,8 +46,20 @@
         <img src="./Image/makima.png" alt="makima" />
         <span>Makima</span>
       </div>
-    </article>
+    </section>
   </main>
+  <div class="modal-background" id="modal">
+    <form class="modal" id="addItemForm">
+        <span class="modal-close" id="closeModal">X</span>
+        <label for="name" class="label">이름</label>
+        <input id="name" type="text" placeholder="캐릭터의 이름을 입력해조" class="input" maxlength="10" required/>
+        <label for="image" class="label">이미지</label>
+        <input id="image" type="text" placeholder="이미지 주소를 첨부해조" class="input" required />
+        <button type="submit" class="submit-button">Save!</button>
+    </form>
+</div>
+<script src="./modal.js"></script>
+<script src="./addItem.js"></script>
 </body>
 
 </html>
